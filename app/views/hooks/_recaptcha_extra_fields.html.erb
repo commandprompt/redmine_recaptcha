@@ -1,0 +1,2 @@
+<%= recaptcha_tags :public_key => Setting.plugin_redmine_recaptcha['recaptcha_public_key'], :ssl => true %>
+<% flash.delete(:recaptcha_error) %>

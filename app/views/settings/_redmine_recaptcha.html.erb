@@ -1,0 +1,16 @@
+<fieldset>
+  <legend>reCAPTCHA private/public keys</legend>
+  <p>Sign up for a <a href="http://www.google.com/recaptcha">reCAPTCHA</a> account, then set keys below.</p>
+  <p>
+    <label for="settings_recaptcha_private_key">Private Key</label>
+    <%= text_field_tag("settings[recaptcha_private_key]",
+                       @settings['recaptcha_private_key'],
+                       :size => 52 ) %>
+  </p>
+  <p>
+    <label for="settings_recaptcha_public_key">Public Key</label>
+    <%= text_field_tag("settings[recaptcha_public_key]",
+                       @settings['recaptcha_public_key'],
+                       :size => 52 ) %>
+  </p>
+</fieldset>
