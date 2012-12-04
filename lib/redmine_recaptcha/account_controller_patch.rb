@@ -12,8 +12,6 @@ module RedmineRecaptcha
     
     module InstanceMethods
       def register_with_recaptcha_verification
-        logger.info "register_with_recaptcha_verification"
-
         unless request.get?
           unless verify_recaptcha(:private_key => Setting.plugin_redmine_recaptcha['recaptcha_private_key'])
             user_params = params[:user] || {}
